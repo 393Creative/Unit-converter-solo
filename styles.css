@@ -4,15 +4,6 @@ body{
     font-family: inter, sans-serif;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-input[type=number]{
-    -moz-appearance: textfield;
-}
-
 #input-head{
    margin-top: 0px;
    display: flex;
