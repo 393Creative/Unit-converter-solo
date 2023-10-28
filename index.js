@@ -1,41 +1,32 @@
-
-// 1 meter = 3.281 feet
-// 1 liter = 0.264 gallon
-// 1 kilogram = 2.204 pound
-
-// "l-data"
-// "v-data"
-// "m-data"
-
-
-const inputEl =  document.querySelector('span')
+const inputEl =  document.getElementById("input-el")
 const convertBtn = document.getElementById("convert-el")
 const reset  = document.getElementById("reset")
 let lDiv = document.getElementById("l-div")
 let mDiv = document.getElementById("m-div")
 let vDiv = document.getElementById("v-div")
-let num = Number(inputEl.textContent)
 
-reset.addEventListener("click", function() {
-    inputEl.textContent = ""
+reset.addEventListener("dblclick", function() {
+    inputEl.value = ""
+
+    lDiv.innerHTML = `<h3>Length (Meter/Feet)</h3>`
+    vDiv.innerHTML = `<h3>Volume (Liters/Gallons)</h3>`         
+    mDiv.innerHTML = `<h3>Mass (Kilograms/Pounds)</h3>`
 })
 
 convertBtn.addEventListener("click", function (){
-    let num = Number(inputEl.textContent)
-    lData.textContent = num
-    mData.textContent = mValue
-    vData.textContent = vValue
+    const num = Number(inputEl.value)
+
+    const feet = num * 3.28084
+    const meters = num * 0.3048
+    const gallons = num * 0.264172
+    const liters = num * 3.78541
+    const pounds = num * 2.20462
+    const kilos = num * 0.454
+
+    lDiv.innerHTML = `<h3>Length (Meter/Feet)</h3> 
+                    <p>${num} meters = ${feet.toFixed(2)} feet | ${num} feet = ${meters.toFixed(2)} meters</p>`
+    vDiv.innerHTML = `<h3>Volume (Liters/Gallons)</h3>
+                    <p>${num} liters = ${gallons.toFixed(2)} gallons | 20 gallons = ${liters.toFixed(2)} liters</p>`
+    mDiv.innerHTML = `<h3>Mass (Kilograms/Pounds)</h3>
+                    <p>${num} kilos = ${pounds.toFixed(2)} pounds | ${num} pounds = ${kilos.toFixed(2)} kilos</p>`
 })
-
-
-
-
-
-
-
-
-
-
-
-
-

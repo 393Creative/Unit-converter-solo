@@ -26,7 +26,20 @@ body{
     margin-bottom: 30px;
     font-weight: bold;
     min-width: 120px;
+    max-width: 80%;
+    color: white;
+    text-align: center;
 }
+input::placeholder{
+    color: #bfa9fa;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 button{
     font-family: inter, sans-serif;

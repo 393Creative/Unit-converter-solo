@@ -12,21 +12,8 @@
 <body>
     <div id="input-head">
         <h1>Metric/Imperial Unit Converter</h1>
-        <span id="input-el" role="textbox"  contenteditable></span>
-        <script>
-            function allowOnlyNumbers(element) {
-              element.addEventListener('input', function() {
-                const regex = /^[0-9]+$/;
-                const value = element.textContent;
-                if (!regex.test(value)) {
-                  element.textContent = value.replace(/[^0-9]/g, '');
-                }
-              });
-            }
-            
-            allowOnlyNumbers(document.getElementById('input-el'));
-            </script>
-        <button id="convert-el">Convert</button>
+        <input id="input-el" type="number" placeholder="123">
+        <button id="convert-el" >Convert</button>
         <button id="reset">Reset</button>
     </div>
     <div id="data">
